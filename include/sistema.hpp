@@ -9,6 +9,7 @@ using std::string;
 class Sistema{
 public:
 	Sistema(string loja, string cnpj);
+	Sistema(const Sistema &copia);
 	~Sistema();
 
 	string getLoja() const;
@@ -22,6 +23,11 @@ public:
 
 	void listarAtividadesVet();//(Inserção, Alteração, Remoção e Consulta) Veterinários.
 	void listarAtividadesTra();//(Inserção, Alteração, Remoção e Consulta) Tratadores.
+
+	void limpaTela();
+	void pausar();
+
+	void testar(); //Popular Programa
 
 private:
 

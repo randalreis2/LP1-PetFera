@@ -48,10 +48,43 @@ Sistema::listarAnimais(){
 	return ;
 }
 
-void listarAtividadesVet(){
+void 
+Sistema::listarAtividadesVet(){
 	return ; /*(Inserção, Alteração, Remoção e Consulta) Veterinários.*/
 }
 	
-void listarAtividadesTra(){
+void 
+Sistema::listarAtividadesTra(){
 	return ; /*(Inserção, Alteração, Remoção e Consulta) Tratadores.*/
 }
+void 
+Sistema::limpaTela(){
+	#if defined (_WIN32) && !defined (DEBUG)
+	    system("cls");
+	#elif (defined (__LINUX__) || defined(__gnu_linux__) || defined(__linux__)) && !defined (DEBUG)
+	    system("clear");
+	#elif defined (__APPLE__) && !defined (DEBUG)
+	    system("clear");
+	#endif
+}
+void 
+Sistema::pausar(){
+	cout << "Pressione qualquer tecla para continuar...";
+	cin.get();
+	cin.ignore();
+}
+
+void 
+Sistema::testar(){
+	Sistema* petfera = new Sistema("Pet Fera","870");
+	//petfera->addAnimal 
+	//petfera->addVet (new Veterinario("Bart Simpson", "4815162342");
+	//petfera->addTra (new Tratador("Homer Simpson","1337");
+//	
+	
+//	this->adicionaEmpresa(vought);
+//	this->listarEmpresas();
+
+//	vought->listaEmpregados();
+}
+	

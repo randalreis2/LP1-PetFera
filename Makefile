@@ -22,5 +22,9 @@ $(BIN)/main.o : $(SRC)/main.cpp
 	$(CC) $(CPPFLAGS) -c $(SRC)/main.cpp -o $@
 $(BIN)/sistema.o : $(SRC)/sistema.cpp $(INC)/sistema.hpp 
 	$(CC) $(CPPFLAGS) -c $(SRC)/sistema.cpp -o $@
+$(BIN)/tratador.o : $(SRC)/tratador.cpp $(INC)/tratador.hpp 
+	$(CC) $(CPPFLAGS) -c $(SRC)/sistema.cpp -o $@
+$(BIN)/veterinario.o : $(SRC)/veterinatio.cpp $(INC)/veterinario.hpp 
+	$(CC) $(CPPFLAGS) -c $(SRC)/sistema.cpp -o $@
 clean:
 	rm -f core $(PROG) $(OBJS)

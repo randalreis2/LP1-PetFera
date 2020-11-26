@@ -7,12 +7,10 @@ using std::cin;
 using std::endl;
 
 void menuPrincipal(Sistema* si);
-void limpaTela();
-void pausar();
 
 int main(int argc, char const *argv[]){
 
-	Sistema* sisp = new Sistema("PetFera","554"); //101.100.110/0001-01
+	Sistema* sisp = new Sistema("PetFera","554"); //??101.100.110/0001-01
 
 	menuPrincipal(sisp);
 
@@ -23,7 +21,7 @@ int main(int argc, char const *argv[]){
 
 void menuPrincipal(Sistema* si) {
 	char opcao;
-	limpaTela();
+	si->limpaTela();
 	do {	 
 		cout<< endl << "Opções: ";
 		cout<< endl << "========";
@@ -40,7 +38,7 @@ void menuPrincipal(Sistema* si) {
 
 		cin >> opcao;
 
-		limpaTela();
+		si->limpaTela();
 		 
 		switch(opcao){
 			case 'C' :
@@ -62,24 +60,8 @@ void menuPrincipal(Sistema* si) {
 		}
 		cout << endl;
 
-		pausar();
-		limpaTela();
+		si->pausar();
+		si->limpaTela();
 	
 	} while (opcao != 'X' && opcao !='x');
-}
-
-void limpaTela(){
-#if defined (_WIN32) && !defined (DEBUG)
-    system("cls");
-#elif (defined (__LINUX__) || defined(__gnu_linux__) || defined(__linux__)) && !defined (DEBUG)
-    system("clear");
-#elif defined (__APPLE__) && !defined (DEBUG)
-    system("clear");
-#endif
-}
-
-void pausar(){
-	cout << "Pressione qualquer tecla para continuar...";
-	cin.get();
-	cin.ignore();
 }
