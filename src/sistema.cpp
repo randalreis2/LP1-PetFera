@@ -70,10 +70,10 @@ Sistema::InsetVet (){
 	cin >> nomeVet;
 	cout << "Insira o numero do CRMV do veterinario: ";
 	cin >> numCRMV;
-	cout << endl
-	
-	Veterinario* vetp = new Veterinario(nomeVet, numCRMV);
-	cout << &vetp;
+	cout << endl;
+
+	Tratador* tratp = new Tratador("Homer", "vermelho");
+	cout << tratp;
 	return;
 }
 void 

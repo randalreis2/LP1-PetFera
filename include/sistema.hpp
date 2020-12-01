@@ -23,7 +23,7 @@ public:
 	string listarCadastroVet();//(Inserção, Alteração, Remoção e Consulta) Veterinários.
 
 	void InsetTrat ();
-	void InsetVet();C
+	void InsetVet();
 	void Alteracao ();
 	void Remocao ();
 	void Consulta ();
