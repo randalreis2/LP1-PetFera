@@ -1,4 +1,6 @@
 #include "sistema.hpp"
+#include "tratador.hpp"
+#include "veterinario.hpp"
 
 #include <iostream>
 #include <iomanip>
@@ -8,9 +10,8 @@ using std::endl;
 using std::cin;
 using std::getline;
 
-
 Sistema::Sistema(string loja, string cnpj):
-		loja(loja), cnpj(cnpj){
+				loja(loja), cnpj(cnpj){
 }
 Sistema::~Sistema(){
 //	for (auto& conta : this->contas){
@@ -47,16 +48,40 @@ void
 Sistema::listarAnimais(){
 	return ;
 }
+/*(Inserção, Alteração, Remoção e Consulta) Tratadores.*/
+string 
+Sistema::listarCadastroTra(){;
+	return "Tratador";
+}
+string 
+Sistema::listarCadastroVet(){
+	return "Veterinário";
+}
 
 void 
-Sistema::listarAtividadesVet(){
-	return ; /*(Inserção, Alteração, Remoção e Consulta) Veterinários.*/
+Sistema::Insercao (){
+	Tratador::Tratador("Homer", "vermelho");
+	Veterinario::Veterinario("Bart", 1337);
+
+	return ;
 }
-	
 void 
-Sistema::listarAtividadesTra(){
-	return ; /*(Inserção, Alteração, Remoção e Consulta) Tratadores.*/
+Sistema::Alteracao (){
+	return ;
 }
+void 
+Sistema::Remocao (){
+	return ;
+}
+void 
+Sistema::Consulta (){
+	return ;
+}
+
+void menuCadastro(string& funcionario){
+	return ;
+}
+
 void 
 Sistema::limpaTela(){
 	#if defined (_WIN32) && !defined (DEBUG)
@@ -67,24 +92,23 @@ Sistema::limpaTela(){
 	    system("clear");
 	#endif
 }
-void 
-Sistema::pausar(){
-	cout << "Pressione qualquer tecla para continuar...";
-	cin.get();
-	cin.ignore();
-}
-
-void 
-Sistema::testar(){
-	Sistema* petfera = new Sistema("Pet Fera","870");
+//void 
+//Sistema::testar(){
+	//Sistema* petfera = new Sistema("Pet Fera","870");
 	//petfera->addAnimal 
-	//petfera->addVet (new Veterinario("Bart Simpson", "4815162342");
-	//petfera->addTra (new Tratador("Homer Simpson","1337");
+	//addVet (new Veterinario("Bart Simpson", "4815162342"));
+	//addTra (new Tratador("Homer Simpson","1337"));
 //	
 	
 //	this->adicionaEmpresa(vought);
 //	this->listarEmpresas();
 
 //	vought->listaEmpregados();
+//}
+
+void 
+Sistema::pausar(){
+	cout << "Pressione qualquer tecla para continuar...";
+	cin.get();
+	cin.ignore();
 }
-	

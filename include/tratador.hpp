@@ -13,6 +13,8 @@ public:
 
 	string getNome() const;
 	string getCor() const;
+	string getCargo();
+
 	//vector<Conta*> getContas() const;
 
 	void getNome(); // Interface com o usuário
@@ -21,10 +23,7 @@ public:
 	//void getIdade(); // Interface com o usuário
 
 private:
-
-
-private:
 	string nome;
-	string cor;
-
+	string cor = "Verde";
+	string cargo = "Tratador";
 };

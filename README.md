@@ -2,10 +2,8 @@
 
 Repositorio para avaliação 
 
-"Grupo85"
-
+"Grupo"
 Randal Fernandes Reis
-
 Emerson Irineu Freire de Lima
 
 

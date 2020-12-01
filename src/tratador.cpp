@@ -8,31 +8,20 @@ using std::endl;
 using std::cin;
 using std::getline;
 
-
 Tratador::Tratador(string nome, string Cor):
-		loja(nome), cnpj(cor){
+		nome(nome), cor(cor){
 }
 Tratador::~Tratador(){
 //	for (auto& conta : this->contas){
 //		delete conta;
 //	}
 }
-
-string
-Tratador::getNome() const{
+string Tratador::getNome() const{
 	return this->nome;
 }
-
-string 
-Tratador::getCor() const{
+string Tratador::getCor() const{
 	return this->cor;
 }
-
-/*void listarAtividadesVet(){
-	return ; /*(Inserção, Alteração, Remoção e Consulta) Veterinários.* /
+string Tratador::getCargo(){
+	return this->cargo;
 }
-	
-void listarAtividadesTra(){
-	return ; /*(Inserção, Alteração, Remoção e Consulta) Tratadores.* /
-}
-*/

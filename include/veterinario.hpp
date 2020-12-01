@@ -13,6 +13,7 @@ public:
 
 	string getNome() const;
 	string getCRMV() const;
+	string getCargo();
 	//vector<Conta*> getContas() const;
 
 	void cadastrarVeterinario(); // Interface com o usuário
@@ -22,10 +23,8 @@ public:
 	void cargo(); // Interface com o usuário
 
 private:
-
-
-private:
 	string nome;
-	string CRMV;
+	int CRMV;
+	string cargo = "Veterinário";
 
 };
