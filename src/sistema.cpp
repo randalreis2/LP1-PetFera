@@ -14,9 +14,7 @@ Sistema::Sistema(string loja, string cnpj):
 				loja(loja), cnpj(cnpj){
 }
 Sistema::~Sistema(){
-//	for (auto& conta : this->contas){
-//		delete conta;
-//	}
+//	for (auto& conta : this->contas){delete conta;}
 }
 
 string
@@ -59,11 +57,24 @@ Sistema::listarCadastroVet(){
 }
 
 void 
-Sistema::Insercao (){
-	Tratador::Tratador("Homer", "vermelho");
-	Veterinario::Veterinario("Bart", 1337);
-
-	return ;
+Sistema::InsetTrat (){
+	Tratador* tratp = new Tratador("Homer", "vermelho");
+	cout << tratp;
+	return;
+}
+void 
+Sistema::InsetVet (){
+	string nomeVet;
+	string numCRMV;
+	cout << "Insira o nome comleto do veterinario: ";
+	cin >> nomeVet;
+	cout << "Insira o numero do CRMV do veterinario: ";
+	cin >> numCRMV;
+	cout << endl
+	
+	Veterinario* vetp = new Veterinario(nomeVet, numCRMV);
+	cout << &vetp;
+	return;
 }
 void 
 Sistema::Alteracao (){
@@ -108,7 +119,7 @@ Sistema::limpaTela(){
 
 void 
 Sistema::pausar(){
-	cout << "Pressione qualquer tecla para continuar...";
+	cout  << endl << "Pressione qualquer tecla para continuar...";
 	cin.get();
 	cin.ignore();
 }

@@ -22,7 +22,8 @@ public:
 	string listarCadastroTra();//(Inserção, Alteração, Remoção e Consulta) Tratadores.
 	string listarCadastroVet();//(Inserção, Alteração, Remoção e Consulta) Veterinários.
 
-	void Insercao ();
+	void InsetTrat ();
+	void InsetVet();C
 	void Alteracao ();
 	void Remocao ();
 	void Consulta ();

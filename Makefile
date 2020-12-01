@@ -8,7 +8,7 @@ INC = ./include
 #PROG = $(BIN)/programa
 PROG = $/programa
 CC = g++
-CPPFLAGS = -Wall -std=c++11 -I./include
+CPPFLAGS = -Wall -std=c++14 -I./include
 
 OBJS = $(BIN)/sistema.o $(BIN)/main.o $(BIN)/tratador.o $(BIN)/veterinario.o
 
@@ -24,7 +24,7 @@ $(BIN)/sistema.o : $(SRC)/sistema.cpp $(INC)/sistema.hpp
 	$(CC) $(CPPFLAGS) -c $(SRC)/sistema.cpp -o $@
 $(BIN)/tratador.o : $(SRC)/tratador.cpp $(INC)/tratador.hpp 
 	$(CC) $(CPPFLAGS) -c $(SRC)/tratador.cpp -o $@
-$(BIN)/veterinario.o : $(SRC)/veterinatio.cpp $(INC)/veterinario.hpp 
+$(BIN)/veterinario.o : $(SRC)/veterinario.cpp $(INC)/veterinario.hpp 
 	$(CC) $(CPPFLAGS) -c $(SRC)/veterinario.cpp -o $@
 clean:
 	rm -f core $(PROG) $(OBJS)

@@ -1,4 +1,4 @@
-#include "veterinario.hpp"
+#include "tratador.hpp"
 
 #include <iostream>
 #include <iomanip>
@@ -8,21 +8,14 @@ using std::endl;
 using std::cin;
 using std::getline;
 
-Veterinario::Veterinario(string nome, string CRMV):
-		loja(nome), cnpj(CRMV){
-}
-Veterinario::~Veterinario(){
-//	for (auto& conta : this->contas){
-//		delete conta;
-//	}
-}
-string getCargo() const{
-	return this-> cargo;
-}
-string Veterinario::getLoja() const{
+Tratador::Tratador(string nome, string cor):
+		nome(nome), cor(cor), cargo("Tratador"){}
+Tratador::~Tratador(){}
+
+string Tratador::getNome() const{
 	return this->nome;
 }
-string Veterinario::getNumero() const{
-	return this->CRMV;
-}
 
+string Tratador::getCor() const{
+	return this->cor;
+}

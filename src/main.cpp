@@ -7,7 +7,7 @@ using std::cin;
 using std::endl;
 
 void menuPrincipal(Sistema* si);
-void menuConsultas(string& funcionario, Sistema* si);
+void menuConsultas(string funcionario, Sistema* si);
 
 int main(int argc, char const *argv[]){
 
@@ -26,8 +26,8 @@ void menuPrincipal(Sistema* si) {
 	char opcao;
 	si->limpaTela();
 	do {	 
-		cout<< endl << "Opções: ";
-		cout<< endl << "========";
+		cout<< endl << "Menu principal:";
+		cout<< endl << "================";
 		cout<< endl << "C - Cadastrar novo animal.";
 		cout<< endl << "R - Remover um animal.";
 		cout<< endl << "A - Alterar cadastro de um animal.";
@@ -38,9 +38,8 @@ void menuPrincipal(Sistema* si) {
 
 		cout<< endl << endl << "X - Encerrar.";
 		cout<< endl << endl << "Selecione a opção: ";
-
 		cin >> opcao;
-		si->pausar();
+		//si->pausar();
 		si->limpaTela();
 		 
 		switch(opcao){
@@ -57,10 +56,10 @@ void menuPrincipal(Sistema* si) {
 			case 'l' :{ si->listarAnimais();}
 			break;
 			case 'T' :
-			case 't' :{ si->listarCadastroTra();}
+			case 't' :{menuConsultas("Tratador", si);}
 			break;
 			case 'V' :
-			case 'v' :{ si->listarCadastroVet();}
+			case 'v' :{menuConsultas("Veterinario", si);}
 			break;
 			case 'X' :
 			case 'x' :{ return;}
@@ -74,28 +73,29 @@ void menuPrincipal(Sistema* si) {
 	
 	} while (opcao != 'X' && opcao !='x');
 }
-
-void menuConsultas(string& funcionario, Sistema* si){ 
+void menuConsultas(string funcionario, Sistema* si){ 
 	char opcao;
-	//si->limpaTela();
+	si->limpaTela();
 	do {	 
-		cout<< endl << "Opções: " ;
+		cout<< endl << "Cadastro "<< funcionario <<":" ;
 		cout<< endl << "========";
 		cout<< endl << "I - Inserir novo " << funcionario <<"."; // Fazer modificação de FUNCIONARIO para veterinario ou tratador conforme caso.
 		cout<< endl << "A - Alterar cadastro do " << funcionario <<".";
 		cout<< endl << "R - Remoção do cadastro do " << funcionario <<".";
 		cout<< endl << "C - Consultar cadastro do " << funcionario <<".";
 
-		cout<< endl << endl << "X - Encerrar.";
+		cout<< endl << endl << "X - Para retornar ao menu principal.";
 		cout<< endl << endl << "Selecione a opção: ";
-
 		cin >> opcao;
 
 		si->limpaTela();
 		 
 		switch(opcao){
 			case 'I' :
-			case 'i' :{ si->Insercao();}
+			case 'i' :{ si->InsetVet();}
+			break;
+			case 'T' :
+			case 't' :{ si->InsetTrat();}
 			break;
 			case 'R' :
 			case 'r' :{ si->Alteracao();}
@@ -111,9 +111,9 @@ void menuConsultas(string& funcionario, Sistema* si){
 			break;
 			default : cout << endl << "Opção inválida!";
 		}
-		cout << endl;
 
 		si->pausar();
+		cout << endl;
 		si->limpaTela();
 	}while (opcao != 'X' && opcao !='x');
 }

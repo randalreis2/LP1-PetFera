@@ -13,7 +13,7 @@ public:
 
 	string getNome() const;
 	string getCor() const;
-	string getCargo();
+	string getCargo()const;
 
 	//vector<Conta*> getContas() const;
 
@@ -24,6 +24,6 @@ public:
 
 private:
 	string nome;
-	string cor = "Verde";
-	string cargo = "Tratador";
+	string cor;
+	string cargo;
 };
